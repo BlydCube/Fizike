@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper, twocolumn]{article}
+\documentclass[a4paper, twocolumn]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -15,6 +15,7 @@
 \maketitle
 \addtocounter{section}{8}
 \section{Fizika Termike}
+\subsection{Ndryshimi i Gjendjes dhe Energjise}
 \begin{tikzpicture}
 	\begin{axis}[
 		axis lines = left,
@@ -73,10 +74,6 @@ $$\begin{array}{r c l l}
 
 \end{array}
 $$
-\subsection{Energjia Kinetike}
-\[
-{\epsilon}_{k} = \frac{3}{2} \cdot k_{B}\cdot T
-\] 
 \subsection{Energjia e Brendshme}
 \[
 U = \left\{
@@ -87,7 +84,8 @@ U = \left\{
 		\\
 		3\cdot R\cdot T\cdot n, &3+&\text{atome}
 \end{array}\right.}
-\] 
+\]
+\\
 \[\begin{array}{ccccc}
 	R&=&N_{A}&\cdot &k_{B}\\
 	\\
@@ -98,17 +96,101 @@ U = \left\{
 	 &=&8.31 \frac{J}{mol\cdot K}
 \end{array}
 \]
+\[
+n=\frac{m}{M}=\frac{N}{N_{A}}
+\] 
+\[
+	T(K)=T(^{\circ}C)+273.15
+\] 
+\subsection{Energjia Kinetike}
+\[
+{\epsilon}_{k} = \frac{3}{2} \cdot k_{B}\cdot T
+\] 
+\subsection{Ligji i gazeve}
+\[
+P\cdot V=N\cdot k_{b}\cdot T
+\] 
+\[
+	P\cdot V=n\cdot (N_{A}\cdot k_{B})\cdot T
+\] 
+\[
+P\cdot V=n\cdot R\cdot T
+\] 
+\subsection{Parimi i pare i Termodinamikes}
+\[
+Q=\Delta U + A
+\] 
+"Sasia e nxehtesise qe merr nje sistem shkon pjeserisht per ndryshimin e energjise se brendshme dhe pjeserisht per kryerjen e punes"
+
 \subsection{Izoproceset}
+\subsubsection{Procesi Ciklik}
+\begin{itemize}
+	\item 2 rruge Termodinamike
+	\item Sisteme \emph{Quasi-Statike}
+\end{itemize}
+\[
+\begin{Bmatrix}
+T_{1}&=& T_{2} \\
+\Delta U &=& 0 \\
+Q &=& A \\
+\end{Bmatrix}
+\] 
 \subsubsection{Procesi Izotermik}
  \[
 \frac{P_{1}}{P_{2}} = \frac{V_{2}}{V_{1}}
 \] 
+\[
+\begin{Bmatrix}
+T_{1}&=&T_{2} \\
+\Delta U &=& 0 \\
+Q &= &A \\
+\end{Bmatrix}
+\]
 \subsubsection{Izobarik}
 \[
 \frac{V_{1}}{V_{2}} = \frac{T_{1}}{T_{2}}
 \] 
+\[
+\begin{Bmatrix}
+P_{1}&= &P_{2} \\
+Q&=&\Delta U + A\\
+\end{Bmatrix}
+\]
 \subsubsection{Izohorik}
 \[
 \frac{P_{1}}{T_{2}} = \frac{P_{2}}{T_{2}}
+\] 
+\[
+\begin{Bmatrix}
+V_{1}&=& V_{2} \\
+A&=&0\\
+Q&=&\Delta U\\
+\end{Bmatrix}
+\]
+\subsubsection{Procesi Adiabatik}
+\[
+\begin{Bmatrix}
+Q&=&0\\
+A&=&-\Delta U\\
+\end{Bmatrix}
+\]
+\subsection{Parimi i dyte i Termodinamikes}
+"Nuk mund te ekzistoje motorri i perjetshem"
+\[
+A=Q_{i}-Q_{f}
+\] 
+\[
+A=T_{i}-T_{f}
+\]
+$ \text{Rendimenti} \to \eta $
+\[
+\begin{Bmatrix}
+	\eta = \frac{A}{Q_{i}}\\
+	\eta < 1
+\end{Bmatrix}
+\begin{Bmatrix}
+	\eta = \frac{A}{T_{i}}\\
+	\eta < 1
+\end{Bmatrix}
 \] 
 \end{document}
