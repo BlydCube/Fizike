@@ -2,6 +2,11 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\pgfplotsset{width=7cm,compat=1.9}
+
 \title{Permbledhje: \\ Tremujori - 2}
 \author{Kristian Blido}
 \date{13-03-2021}
@@ -10,6 +15,89 @@
 \maketitle
 \addtocounter{section}{8}
 \section{Fizika Termike}
+\begin{tikzpicture}
+	\begin{axis}[
+		axis lines = left,
+    		xlabel = $t$,
+    		ylabel = {$T$},
+		grid=both,
+		grid style={line width=.1pt, draw=gray!30}
+		xtick={-5, 0, 5, 10, 15, 20}
+		%minor tick num=5
+		]
+%Below the red parabola is defined
+\addplot [
+    domain=-5:0, 
+    samples=100, 
+    color=black,
+]
+{x+5};
+\addplot [
+    domain=0:5, 
+    samples=100, 
+    color=black,
+]
+{5};
+\addplot [
+    domain=5:10, 
+    samples=100, 
+    color=black,
+]
+{x};
+\addplot [
+    domain=10:15, 
+    samples=100, 
+    color=black,
+]
+{10};
+\addplot [
+    domain=15:20, 
+    samples=100, 
+    color=black,
+]
+{x-5};
+	\addplot[mark=*] coordinates {(-5, 0)};
+	\addplot[mark=*] coordinates {(0, 5)};
+	\addplot[mark=*] coordinates {(5, 5)};
+	\addplot[mark=*] coordinates {(10, 10)};
+	\addplot[mark=*] coordinates {(15, 10)};
+	\addplot[mark=*] coordinates {(20, 15)};
+\end{axis}
+\end{tikzpicture}
+$$\begin{array}{r c l l}
+	]-5, 0[ & \to&\textrm{Ngrohje}& Q=c\cdot m \cdot \Delta T \\
+	]0, 5[ &\to& \textrm{Shkrirje}& Q=\lambda \cdot m \\
+	]5, 10[ &\to& \textrm{Ngrohje}& Q=c\cdot m \cdot \Delta T  \\
+	]10, 15[ &\to& \textrm{Avullim}& Q=q \cdot m\\
+	]15, 20[ &\to& \textrm{Ngrohje}& Q=c\cdot m \cdot \Delta T \
+
+\end{array}
+$$
+\subsection{Energjia Kinetike}
+\[
+{\epsilon}_{k} = \frac{3}{2} \cdot k_{B}\cdot T
+\] 
+\subsection{Energjia e Brendshme}
+\[
+U = \left\{
+{\begin{array}{l l l}
+		\frac{3}{2}\cdot R\cdot T\cdot n, &1&\text{atom} \\
+		\\
+		\frac{5}{2}\cdot R\cdot T\cdot n, &2&\text{atome}\\
+		\\
+		3\cdot R\cdot T\cdot n, &3+&\text{atome}
+\end{array}\right.}
+\] 
+\[\begin{array}{ccccc}
+	R&=&N_{A}&\cdot &k_{B}\\
+	\\
+	 &=&6.02\cdot 10^{23} \frac{}{mol^{-1}} &\cdot & 1.38 \cdot \frac{m^2 kg}{10^{23}\cdot s^{2}\cdot K^{1}}   \\
+	 \\
+	 &=&8.31 \frac{m^2\cdot kg}{s^{2}\cdot K\cdot mol}\\
+	 \\
+	 &=&8.31 \frac{J}{mol\cdot K}
+\end{array}
+\]
 \subsection{Izoproceset}
 \subsubsection{Procesi Izotermik}
  \[
@@ -22,25 +110,5 @@
 \subsubsection{Izohorik}
 \[
 \frac{P_{1}}{T_{2}} = \frac{P_{2}}{T_{2}}
-\] 
-\subsection{Energjia Kinetike}
-\[
-{\epsilon}_{k} = \frac{3}{2} \cdot k_{B}\cdot T
-\] 
-\subsection{Energjia e Brendshme $U$}
-\[
-U = \begin{Bmatrix} 
-\frac{3}{2}\cdot R\cdot T\cdot n ,\; \text{1 atom} \\
-\frac{5}{2}\cdot R\cdot T\cdot n, \; \text{2 atome}\\
-3\cdot R\cdot T\cdot n, \; \text{3+ atome}
-\end{Bmatrix}
-\] 
-\[
-		\left\{
-{\begin{array}{cl}
-		\frac{3}{2}\cdot R\cdot T\cdot n, &1&\text{atom} \\
-		\frac{5}{2}\cdot R\cdot T\cdot n, &2&\text{atome}\\
-		3\cdot R\cdot T\cdot n, &3+&\text{atome}
-\end{array}\right.
 \] 
 \end{document}
